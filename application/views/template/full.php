@@ -199,28 +199,34 @@
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Product</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Ruang Sidang</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
                         <div class="form-group row">
-                            <label class="col-md-2 col-form-label">Product Code</label>
+                            <label class="col-md-2 col-form-label">Nomor Perkara</label>
                             <div class="col-md-10">
-                              <input type="text" name="product_code_edit" id="product_code_edit" class="form-control" placeholder="Product Code" readonly>
+                              <input type="text" name="nomor_perkara" id="nomor_perkara" class="form-control" placeholder="Nomor Perkara" readonly>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-md-2 col-form-label">Product Name</label>
+                            <label class="col-md-2 col-form-label">Pemohon/Penggugat</label>
                             <div class="col-md-10">
-                              <input type="text" name="product_name_edit" id="product_name_edit" class="form-control" placeholder="Product Name">
+                              <input type="text" name="pihak1_text" id="pihak1_text" class="form-control" placeholder="Nama Pemohon/Penggugat" readonly>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-md-2 col-form-label">Price</label>
+                            <label class="col-md-2 col-form-label">Termohon/Tergugat</label>
                             <div class="col-md-10">
-                              <input type="text" name="price_edit" id="price_edit" class="form-control" placeholder="Price">
+                              <input type="text" name="pihak2_text" id="pihak2_text" class="form-control" placeholder="Nama Termohon/Tergugat" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label">Ruang Sidang</label>
+                            <div class="col-md-10">
+                              <input type="text" name="ruangan" id="ruangan" class="form-control" placeholder="Ruang Sidang">
                             </div>
                         </div>
                   </div>
@@ -265,12 +271,12 @@
 	$(document).ready(function(){
         
             
-		show_product();	//call function show all product
+		show_data();	//call function show all data
 		
 		$('#mydata').dataTable();
 		 responsive: true
-		//function show all product
-		function show_product(){
+		//function show all data
+		function show_data(){
 		    $.ajax({
 		        type  : 'ajax',
 		        url   : '<?php echo site_url('jadwal_sidang/jadwal_sidang_data')?>',
@@ -286,10 +292,9 @@
 		                        '<td>'+data[i].jenis_perkara_nama+'</td>'+
 		                        '<td>'+data[i].pihak1_text+'</td>'+
 		                        '<td>'+data[i].pihak2_text+'</td>'+
-		                        // '<td>'+data[i].tanggal_sidang+'</td>'+
 		                        '<td>'+data[i].ruangan+'</td>'+
 		                        '<td style="text-align:right;">'+
-                                    '<a href="javascript:void(0);" class="btn btn-info btn-sm item_edit" data-product_code="'+data[i].product_code+'" data-product_name="'+data[i].product_name+'" data-price="'+data[i].product_price+'">Edit</a>'+
+                                    '<a href="javascript:void(0);" class="btn btn-info btn-sm item_edit" data-nomor_perkara="'+data[i].nomor_perkara+'" data-pihak1_text="'+data[i].pihak1_text+'" data-pihak2_text="'+data[i].pihak2_text+'" data-ruangan="'+data[i].ruangan+'">Edit</a>'+
                                 '</td>'+
 		                        '</tr>';
 		            }
@@ -299,22 +304,24 @@
 		    });
 		}
  
-        //Save product
+        //Save data
         $('#btn_save').on('click',function(){
-            var product_code = $('#product_code').val();
-            var product_name = $('#product_name').val();
-            var price        = $('#price').val();
+            var nomor_perkara = $('#nomor_perkara').val();
+            var pihak1_text = $('#pihak2_text').val();
+            var pihak2_text = $('#pihak2_text').val();
+            var ruangan        = $('#ruangan').val();
             $.ajax({
                 type : "POST",
-                url  : "<?php echo site_url('product/save')?>",
+                url  : "<?php echo site_url('jadwal_sidang/save')?>",
                 dataType : "JSON",
-                data : {product_code:product_code , product_name:product_name, price:price},
+                data : {ruangan:ruangan},
                 success: function(data){
-                    $('[name="product_code"]').val("");
-                    $('[name="product_name"]').val("");
-                    $('[name="price"]').val("");
+                    $('[name="nomor_perkara"]').val("");
+                    $('[name="pihak1_text"]').val("");
+                    $('[name="pihak2_text"]').val("");
+                    $('[name="ruangan"]').val("");
                     $('#Modal_Add').modal('hide');
-                    show_product();
+                    show_data();
                 }
             });
             return false;
@@ -322,61 +329,42 @@
 
         //get data for update record
         $('#show_data').on('click','.item_edit',function(){
-            var product_code = $(this).data('product_code');
-            var product_name = $(this).data('product_name');
-            var price        = $(this).data('price');
-            
+            var nomor_perkara = $(this).data('nomor_perkara');
+            var pihak1_text = $(this).data('pihak1_text');
+            var pihak2_text = $(this).data('pihak2_text');
+            var ruangan        = $(this).data('ruangan');
+            // modal edit tampil
             $('#Modal_Edit').modal('show');
-            $('[name="product_code_edit"]').val(product_code);
-            $('[name="product_name_edit"]').val(product_name);
-            $('[name="price_edit"]').val(price);
+            $('[name="nomor_perkara"]').val(nomor_perkara);
+            $('[name="pihak1_text"]').val(pihak1_text);
+            $('[name="pihak2_text"]').val(pihak2_text);
+            $('[name="ruangan"]').val(ruangan);
         });
 
-        //update record to database
+        //baca setelah edit close
          $('#btn_update').on('click',function(){
-            var product_code = $('#product_code_edit').val();
-            var product_name = $('#product_name_edit').val();
-            var price        = $('#price_edit').val();
+            // var nomor_perkara = $('#nomor_perkara').val();
+            // var pihak1_text = $('#pihak1_text').val();
+            // var pihak2_text = $('#pihak2_text').val();
+            var ruangan     = $('#ruangan').val();
             $.ajax({
                 type : "POST",
-                url  : "<?php echo site_url('product/update')?>",
+                url  : "<?php echo site_url('jadwal_sidang/update')?>",
                 dataType : "JSON",
-                data : {product_code:product_code , product_name:product_name, price:price},
+                data : {ruangan:ruangan},
                 success: function(data){
-                    $('[name="product_code_edit"]').val("");
-                    $('[name="product_name_edit"]').val("");
-                    $('[name="price_edit"]').val("");
+                    console.log(data);
+                    // $('[name="nomor_perkara"]').val("");
+                    // $('[name="pihak1_text"]').val("");
+                    // $('[name="pihak2_text"]').val("");
+                    $('[name="ruangan"]').val("");
                     $('#Modal_Edit').modal('hide');
-                    show_product();
+                    show_data();
                 }
             });
             return false;
         });
 
-        //get data for delete record
-        $('#show_data').on('click','.item_delete',function(){
-            var product_code = $(this).data('product_code');
-            
-            $('#Modal_Delete').modal('show');
-            $('[name="product_code_delete"]').val(product_code);
-        });
-
-        //delete record to database
-         $('#btn_delete').on('click',function(){
-            var product_code = $('#product_code_delete').val();
-            $.ajax({
-                type : "POST",
-                url  : "<?php echo site_url('product/delete')?>",
-                dataType : "JSON",
-                data : {product_code:product_code},
-                success: function(data){
-                    $('[name="product_code_delete"]').val("");
-                    $('#Modal_Delete').modal('hide');
-                    show_product();
-                }
-            });
-            return false;
-        });
 
 	});
 

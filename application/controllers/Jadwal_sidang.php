@@ -20,4 +20,15 @@ class Jadwal_sidang extends CI_Controller {
 		$data=$this->M_jadwal_sidang->tampil_sidang();
 		echo json_encode($data);
 	}
+
+	function save(){
+		$data=$this->M_jadwal_sidang->save();
+		echo json_encode($data);
+	}
+
+	function update(){
+		$data=$this->M_jadwal_sidang->update();
+		
+		echo json_encode($data);
+	}
 }
