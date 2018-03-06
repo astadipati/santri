@@ -164,7 +164,7 @@
 		function show_product(){
 		    $.ajax({
 		        type  : 'ajax',
-		        url   : '<?php echo site_url('jadwal_sidang/jadwal_sidang_data')?>',
+		        url   : '<?php echo site_url('C_jadwal_sidang/jadwal_sidang_data')?>',
 		        async : false,
 		        dataType : 'json',
 		        success : function(data){

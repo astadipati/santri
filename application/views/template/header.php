@@ -17,6 +17,11 @@
    
     <!-- MetisMenu CSS -->
      <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/sb2/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    
+    <!-- Datatable CSS -->
+     <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/css/jquery.dataTables.css" rel="stylesheet">
+    <!-- Datatable Responsive CSS -->
+     <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/css/dataTables.bootstrap4.css" rel="stylesheet">
 
     <!-- Custom CSS -->
      <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/sb2/dist/css/sb-admin-2.css" rel="stylesheet">
@@ -90,7 +95,7 @@
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Jadwal Sidang</a>
+                            <a href="<?php echo base_url()?>jadwal_sidang"><i class="fa fa-table fa-fw"></i> Jadwal Sidang</a>
                         </li>
 
                         <li>
