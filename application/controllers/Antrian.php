@@ -10,7 +10,7 @@ class Antrian extends CI_Controller {
 		// echo phpinfo();
 		// $day = date('D', strtotime('Y-m-d'));
 		// echo "HARI : ".$this->hari().$day;
-	}
+	} 
 
 	function display_antrian_server(){
 		// data jadwal sidang

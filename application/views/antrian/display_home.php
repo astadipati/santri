@@ -69,7 +69,7 @@
                                         <p class="nama_ruang_home_2">AKTA CERAI / SALINAN PUTUSAN</p>
                                     </a>
                                 </div>
-                            </div>
+                            </div> 
 
                             <div class="col-md-6">
                                 <div class="menu-item blue responsive-2">
