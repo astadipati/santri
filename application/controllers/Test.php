@@ -12,6 +12,6 @@ class Test extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('template/full');
+		$this->load->view('template/full1');
 	}
 }

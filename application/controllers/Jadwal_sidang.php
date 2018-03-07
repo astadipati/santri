@@ -12,9 +12,10 @@ class Jadwal_sidang extends CI_Controller {
 	{
 		// $data['tot_daftar']    = $this->M_jadwal_sidang->tampil_sidang()->num_rows(); 
 		// $this->load->view('jadwal_sidang/jadwal_sidang_content');
-		$this->load->view('template/header');
-		$this->load->view('content/jadwal_sidang');
-		$this->load->view('template/footer');
+		// $this->load->view('template/header');
+		// $this->load->view('content/jadwal_sidang');
+		// $this->load->view('template/footer');
+		$this->load->view('template/full');
 	}
 	function jadwal_sidang_data(){
 		$data=$this->M_jadwal_sidang->tampil_sidang();

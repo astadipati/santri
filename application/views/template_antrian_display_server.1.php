@@ -1,12 +1,14 @@
 <?php
 date_default_timezone_set("Asia/Jakarta");
+
 ?>
 <html>
 <head>
+
 <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico" type="image/png">
     <title>ANTRIAN PA TUBAN</title>
 
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/component2.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/component.css" />
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 
                <script type='text/javascript'>
@@ -77,25 +79,17 @@ $this->load->view($main_body);
                 <section>
                     <div class="videoWrapper">
                         <!-- Copy & Pasted from YouTube -->
-                        <iframe width="420" height="315" src="https://www.youtube.com/embed?listType=playlist&list=PLeFQnOKoujGP27WKkClh9ZRBPouOm12iM&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/iBd4W8_jUzo?autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+                        <!-- <iframe width="420" height="315" src="https://www.youtube.com/embed/fbYvp-_Gw_M&list=PLZinIqbK64U5bgHYB4kvRVIUV9HwThnui?autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe> -->
                     </div>
                 </section>
                 <section id="bl-work-section">
                     <div class="bl-box judul-box">
-                        <h1 id="urutanpendaftaran">-----</h1>
-                        <h2 id="">---------------</h2>
-                        <h2 id="">P : ------------</h2>
-                        <h2 id="">T : ------------</h2>
-                        <h1>POSYANKUM</h1>
-                    </div>          
-                </section>
-                 <section id="bl-work-section">
-                    <div class="bl-box judul-box">
-                        <h1 id="urutanmeja1">-----</h1>
-                        <h2 id="">---------------</h2>
-                        <h2 id="">P : ------------</h2>
-                        <h2 id="">T : ------------</h2>
-                        <h1>PENDAFTARAN<h1>
+                        <h1 id="nomor_antrian_terakhir_sidang_1">-----</h1>
+                        <h2 id="nosidang_1">---------------</h2>
+                        <h2 id="psidang_1">P : ------------</h2>
+                        <h2 id="tsidang_1">T : ------------</h2>
+                        <h1>RUANG SIDANG I</h1>
                     </div>          
                 </section>
                 <section>
@@ -126,41 +120,16 @@ $this->load->view($main_body);
                         </marquee>
                     </div>
                 </section>
-                <section id="bl-work-section">
+                <section>
                     <div class="bl-box judul-box">
-                        <h1 id="urutanmediasi">-----</h1>
-                        <h2 id="nomediasi">---------------</h2>
-                        <h2 id="pmediasi">P : ------------</h2>
-                        <h2 id="tmediasi">T : ------------</h2>
-                        <h1>MEDIASI</h1>
-                    </div>          
-                </section>
-                 <section id="bl-work-section">
-                    <div class="bl-box judul-box">
-                        <h1 id="urutankasir">-----</h1>
-                        <h2 id="nokasir">---------------</h2>
-                        <h2 id="pkasir">P : ------------</h2>
-                        <h2 id="tkasir">T : ------------</h2>
-                        <h1>KASIR</h1>
-                    </div>          
-                </section>
-                <section id="bl-work-section">
-                    <div class="bl-box judul-box">
-                        <h1 id="urutanac">-----</h1>
-                        <h2 id="noac">---------------</h2>
-                        <h2 id="pac">P : ------------</h2>
-                        <h2 id="tac">T : ------------</h2>
-                        <h1>AKTA CERAI</h1>
-                    </div>          
-                </section>
-                 <section id="bl-work-section">
-                    <div class="bl-box judul-box">
-                        <h1 id="urutanpengaduan">-----</h1>
-                        <h2 id="">---------------</h2>
-                        <h2 id="">P : ------------</h2>
-                        <h2 id="">T : ------------</h2>
-                        <h1>PENGADUAN</h1>
-                    </div>          
+                        <h1 id="nomor_antrian_terakhir_sidang_2">-----</h1>
+                        <h2 id="nosidang_2">---------------</h2>
+                        <h2 id="psidang_2">P : ------------</h2>
+                        <h2 id="tsidang_2">T : ------------</h2>
+                        <h1>RUANG SIDANG II</h1>
+                    </div>
+            
+                    <span class="bl-icon bl-icon-close"></span>
                 </section>
             </div>
         </div>

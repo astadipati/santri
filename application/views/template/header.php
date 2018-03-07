@@ -11,26 +11,25 @@
     <meta name="author" content="">
 
     <title>SANTRI Pengadilan Agama Tuban</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/sb2/vendor/bootstrap/css/bootstrap.min.css" />
+ <!-- Bootstrap Core CSS -->
+ <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/sb2/vendor/bootstrap/css/bootstrap.min.css" />
    
-    <!-- MetisMenu CSS -->
-     <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/sb2/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-    
-    <!-- Datatable CSS -->
-     <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/css/jquery.dataTables.css" rel="stylesheet">
-    <!-- Datatable Responsive CSS -->
-     <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/css/dataTables.bootstrap4.css" rel="stylesheet">
+   <!-- MetisMenu CSS -->
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/sb2/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+   <!-- datatable CSS -->
+   <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/sb2/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet">
+   
+   <!-- datatable Responsive CSS -->
+   <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/sb2/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet">
+   
+   <!-- Custom CSS -->
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/sb2/dist/css/sb-admin-2.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-     <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/sb2/dist/css/sb-admin-2.css" rel="stylesheet">
+   <!-- Morris Charts CSS -->
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/sb2/vendor/morrisjs/morris.css" rel="stylesheet">
 
-    <!-- Morris Charts CSS -->
-     <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/sb2/vendor/morrisjs/morris.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-     <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/sb2/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+   <!-- Custom Fonts -->
+    <link type="text/css" rel="stylesheet" href="<?php echo base_url()?>assets/sb2/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 </head>
 

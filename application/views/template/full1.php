@@ -181,7 +181,7 @@
                                             Pihak 2</th>
                                             <th class="sorting" tabindex="0" aria-controls="mydata" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 61px;">
                                             Ruang</th>
-                                            <!-- <th style="width: 61px;">Actions</th> -->
+                                            <th style="width: 61px;">Actions</th>
                                         </tr>
                                     </thead>
                                 <tbody id="show_data">
@@ -293,9 +293,9 @@
 		                        '<td>'+data[i].pihak1_text+'</td>'+
 		                        '<td>'+data[i].pihak2_text+'</td>'+
 		                        '<td>'+data[i].ruangan+'</td>'+
-		                        // '<td style="text-align:right;">'+
-                                //     '<a href="<?php echo base_URL()?>jadwal_sidang/edit/'+data[i].perkara_id+'" class="btn btn-primary btn-sm" title="Tambah Disposisi">Edit</a>'+
-                                // '</td>'+
+		                        '<td style="text-align:right;">'+
+                                '<a href="javascript:void(0);" class="btn btn-info btn-sm item_edit" data-product_code="'+data[i].product_code+'" data-product_name="'+data[i].product_name+'" data-price="'+data[i].product_price+'">Edit</a>'+' '+
+                                '</td>'+
 		                        '</tr>';
 		            }
 		            $('#show_data').html(html);

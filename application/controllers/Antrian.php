@@ -82,8 +82,7 @@ class Antrian extends CI_Controller {
 		$data['jumlah_kasir']= $jumlahkasir;
 
 		$data['main_body']='antrian/display_home';
-		$this->load->vars($data);
-		$this->load->view('template_antrian');
+		$this->load->view('template_antrian', $data);
 	}
 
 	function infolain(){

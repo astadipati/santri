@@ -12,31 +12,30 @@ class M_jadwal_sidang extends CI_Model {
                                     WHERE b.tanggal_sidang = DATE(NOW());");
 		return $hasil->result();
 	}
+
+	function sidang_1_detil(){ 
+		$hasil=$this->db->query("SELECT a.`tanggal_pendaftaran`, a.`jenis_perkara_nama`,a.`pihak1_text`,a.`pihak2_text`,
+							b.`id`,b.`nomor_antrian`,b.`ruang_id`,b.`tanggal_sidang`,
+							c.`ruangan`
+							FROM perkara AS a
+							LEFT JOIN antrian AS b ON a.`perkara_id`=b.`perkara_id`
+							LEFT JOIN perkara_jadwal_sidang AS c ON a.`perkara_id`=c.`perkara_id`
+							WHERE c.`tanggal_sidang`=DATE(NOW()) AND c.`ruangan`=1 AND b.`id` IS NULL
+							GROUP BY a.`perkara_id`;");
+		return $hasil->result();
+	}
+
+	function sidang_2_detil(){ 
+		$hasil=$this->db->query("SELECT a.`tanggal_pendaftaran`, a.`jenis_perkara_nama`,a.`pihak1_text`,a.`pihak2_text`,
+							b.`id`,b.`nomor_antrian`,b.`ruang_id`,b.`tanggal_sidang`,
+							c.`ruangan`
+							FROM perkara AS a
+							LEFT JOIN antrian AS b ON a.`perkara_id`=b.`perkara_id`
+							LEFT JOIN perkara_jadwal_sidang AS c ON a.`perkara_id`=c.`perkara_id`
+							WHERE c.`tanggal_sidang`=DATE(NOW()) AND c.`ruangan`=2 AND b.`id` IS NULL
+							GROUP BY a.`perkara_id`;");
+		return $hasil->result();
+	}
 	
- 
-	function simpan(){
-		$data = array(
-				// 'nomor_perkara' 	=> $this->input->post('nomor_perkara'), 
-				// 'pihak1_text' 	=> $this->input->post('pihak1_text'), 
-				// 'pihak2_text' 	=> $this->input->post('pihak2_text'), 
-				'ruangan' => $this->input->post('ruangan'), 
-			);
-		$result=$this->db->insert('perkara_jadwal_sidang',$data);
-		return $result;
-	}
-
-	function update(){
-		// $product_code=$this->input->post('product_code');
-		// $product_name=$this->input->post('product_name');
-        $ruangan=$this->input->post('ruangan');
-        
-
-		// $this->db->set('product_name', $product_name);
-		$this->db->set('ruangan', $ruangan);
-		$this->db->where('id', $id);
-		$result=$this->db->update('perkara_jadwal_sidang');
-		return $result;
-	}
-
 
 }
