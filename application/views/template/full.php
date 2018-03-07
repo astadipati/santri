@@ -294,7 +294,7 @@
 		                        '<td>'+data[i].pihak2_text+'</td>'+
 		                        '<td>'+data[i].ruangan+'</td>'+
 		                        '<td style="text-align:right;">'+
-                                    '<a href="javascript:void(0);" class="btn btn-info btn-sm item_edit" data-nomor_perkara="'+data[i].nomor_perkara+'" data-pihak1_text="'+data[i].pihak1_text+'" data-pihak2_text="'+data[i].pihak2_text+'" data-ruangan="'+data[i].ruangan+'">Edit</a>'+
+                                    '<a href="<?php echo base_URL()?>jadwal_sidang/edit/'+data[i].perkara_id+'" class="btn btn-primary btn-sm" title="Tambah Disposisi">Edit</a>'+
                                 '</td>'+
 		                        '</tr>';
 		            }

@@ -244,6 +244,11 @@
             return false;
         });
 
+
+
+
+
+
         //get data for delete record
         $('#show_data').on('click','.item_delete',function(){
             var product_code = $(this).data('product_code');

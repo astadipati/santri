@@ -12,7 +12,7 @@ class Product extends CI_Controller{
 		$data=$this->product_model->product_list();
 		echo json_encode($data);
 	}
- 
+  
 	function save(){
 		$data=$this->product_model->save_product();
 		echo json_encode($data);
