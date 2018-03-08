@@ -143,9 +143,10 @@ $this->load->view($main_body);
     <div id="ccantrian" class="container" > 
     <div class="bg">
             <div class="wrapper">
-                    <div class="box box1 bg-grey"><h1 align=center> PENGADILAN AGAMA TUBAN</h1></div>
+           
+                    <div class="box box1 bg-grey"><h1 align=center>PENGADILAN AGAMA TUBAN</h1></div>
                     <div class="box box2">
-                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/iBd4W8_jUzo?autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/DhPYnvZmFQA?autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
                     </div>
                     <div class="box box3" align="center">
                         <div class="bl-box judul-box">

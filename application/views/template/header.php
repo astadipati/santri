@@ -85,7 +85,7 @@
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Server<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="flot.html">Server Sidang</a>
+                                    <a href="<?php echo site_url('/antrian/server_sidang')?>" target="_blank">Server Sidang</a>
                                 </li>
                                 <li>
                                     <a href="morris.html">Server Non Sidang</a>
@@ -98,7 +98,7 @@
                         </li>
 
                         <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Input Non Sidang<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-plus  fa-fw"></i> Input Non Sidang<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="panels-wells.html">Pendaftaran</a>
@@ -123,7 +123,7 @@
                         </li>
               
                         <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Ruang Sidang<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-institution  fa-fw"></i> Ruang Sidang<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="blank.html">Ruang Sidang 1</a>
@@ -136,6 +136,24 @@
                                 </li>
                                 <li>
                                     <a href="blank.html">Ruang Sidang 4</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bullhorn -o fa-fw"></i> POS Panggilan<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Posyankum</a>
+                                </li>
+                                <li>
+                                    <a href="blank.html">Kasir</a>
+                                </li>
+                                <li>
+                                    <a href="blank.html">Meja 1</a>
+                                </li>
+                                <li>
+                                    <a href="blank.html">Akte Cerai</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

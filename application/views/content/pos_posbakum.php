@@ -1,23 +1,14 @@
-<meta http-equiv="refresh" content="60"> 
-<div id="ccantrian">
 
-<section id="logo-section" class="text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="logo text-center">
-                            <h1>PENGADILAN AGAMA TUBAN</h1>
-                            <h1 class="judulh1_sub">ANTRIAN POSYANKUM</h1>
-                            <!-- <span id="tgl"><script>document.write(tgl)</script></span> <span id="jam"></span> -->
-                        </div>
-                    </div>
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header">Ruang POSYANKUM</h3>
                 </div>
+                <!-- /.col-lg-12 -->
             </div>
-        </section>
-
-    <br/><br/>    
-
-	<table class="table table-bordered">
+            <!-- /.row -->
+            <div class="row">
+            <table class="table table-bordered">
 		<col  width="5%" />
         <col  width="15%" />
         <col  width="10%" />
@@ -63,10 +54,10 @@
 	<br/><br/><br/><br/>
 
 
-</div>
-
 <script type="text/javascript">
 	$('.selesai').click(function() {
     location.reload();
 	});
 </script>
+            </div>
+            

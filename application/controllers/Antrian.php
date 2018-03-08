@@ -7,45 +7,39 @@ class Antrian extends CI_Controller {
 		$this->load->model('antrian_m','antrian');
 		 $nomor_antrian=$this->antrian->get_nomor_antrian('2','4133');
 		 echo $nomor_antrian;
-		// echo phpinfo();
-		// $day = date('D', strtotime('Y-m-d'));
-		// echo "HARI : ".$this->hari().$day;
-	} 
-
-	function display_antrian_server(){
+	}  
+// view untuk server
+	function server_sidang(){
 		// data jadwal sidang
 		$this->load->model('antrian_m','antrian');
 		$data['func']='display_antrian_server';
 		$data['get_sidang_today']=$this->antrian->get_sidang_today()->result();
 		$data['main_body']='antrian/display_antrian_v';
-		$this->load->vars($data);
-		$this->load->view('template_antrian_display_server');
+		$this->load->view('template_antrian_display_server', $data);
 	}
-
+//  ini yang mau dipanggil dimari
 	function display_antrian_sidang(){
 		// data jadwal sidang
 		$this->load->model('antrian_m','antrian');
 		$data['func']='display_antrian_sidang';
 		$data['get_sidang_today']=$this->antrian->get_sidang_today()->result();
 		$data['main_body']='antrian/display_antrian_v_no_sound';
-		$this->load->vars($data);
-		$this->load->view('template_antrian_display_sidang');
+		$this->load->view('template_antrian_display_sidang', $data);
 	}
-
+// view untuk server non sidang
 	function display_antrian_non_sidang(){
 		// data jadwal sidang
 		$this->load->model('antrian_m','antrian');
 		$data['func']='display_antrian_non_sidang';
 		$data['get_sidang_today']=$this->antrian->get_sidang_today()->result();
 		$data['main_body']='antrian/display_antrian_v_no_sound';
-		$this->load->vars($data);
-		$this->load->view('template_antrian_display_non_sidang');
+		$this->load->view('template_antrian_display_non_sidang', $data);
 	}
 
 	
 
 	function home(){
-		// //$this->minta_akses();
+		//$this->minta_akses();
 		$this->load->library('dblokal');
 		$this->dblokal->koneksiantrian();
 		
@@ -102,7 +96,7 @@ class Antrian extends CI_Controller {
 
 
 	function lihat_panjar(){
-	$server = "192.168.1.101";
+	$server = "192.168.2.4";
 	$user = "sa";
 	$pass = "peradilan";
 	$database = "siadpaWin";
@@ -614,8 +608,8 @@ $isifoot22 = printer_create_font("Agency FB", 18, 17, PRINTER_FW_ULTRABOLD, fals
 
 
 
-	// FUNGSI PENDAFTARAN :: --------------------------------------------
-	function antrian_pendaftaran(){
+	// POS POSYANKUM 
+	function pos_posyankum(){
 		//$this->minta_akses();
 		$this->load->library('dblokal');
 		$this->dblokal->koneksiantrian();
@@ -628,8 +622,9 @@ $isifoot22 = printer_create_font("Agency FB", 18, 17, PRINTER_FW_ULTRABOLD, fals
 		$data['arr_nomorantrian']=$hasil;
 		$data['panggil_no_perk'] = 1;
 		$data['main_body'] = 'antrian/input_antrian_pendaftaran_new';
-		$this->load->vars($data);
-		$this->load->view('template_antrian');
+		$this->load->view('template/header');
+		$this->load->view('content/pos_posbakum', $data);
+		$this->load->view('template/footer');
 		
 	}
 
@@ -937,7 +932,7 @@ $isifoot22 = printer_create_font("Agency FB", 18, 17, PRINTER_FW_ULTRABOLD, fals
 
 
 
-	// FUNGSI SIDANG :: --------------------------------------------
+	// FUNGSI SIDANG :: -------------------------------------------
 	// TAMPILAN BARU ANTRIAN SIDANG HAKIM PP
 	function antrian_ruang_sidang(){
 		//$this->minta_akses();

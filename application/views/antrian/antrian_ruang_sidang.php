@@ -6,6 +6,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="logo text-center">
+						<img src="<?php echo base_url()?>assets/images/monitor.png?>" width=45>
                             <h1>PENGADILAN AGAMA TUBAN</h1>
                             <h1 class="judulh1_sub">ANTRIAN SIDANG - RUANG <?php echo $this->uri->segment(3);?></h1>
                             <span id="tgl"><script>document.write(tgl)</script></span> <span id="jam"></span>
@@ -60,8 +61,8 @@
 						// echo '	[<a href="#" onclick="'.$onclick3.'" id="selesai">SELESAI</a>] <br> ';
 						echo '	[<a href="'.base_url('antrian/selesai_antrian_sidang/'.base64_encode($this->encrypt->encode($row->id))).'/'.$this->uri->segment(3).'/m" id="mediasi">MEDIASI</a>] ';
 						?>
-						[<a href="<?php echo base_url('antrian/selesai_antrian_sidang/'.base64_encode($this->encrypt->encode($row->id))).'/'.$this->uri->segment(3).'/t';?>" onclick="window.open('<?php echo 'http://localhost/SIPP311/perkara_detil_agama/'.base64_encode($this->encrypt->encode($row->perkara_id)); ?>');">TUNDA</a>]
-						[<a href="<?php echo base_url('antrian/selesai_antrian_sidang/'.base64_encode($this->encrypt->encode($row->id))).'/'.$this->uri->segment(3).'/p';?>" onclick="window.open('<?php echo 'http://localhost/SIPP311/perkara_detil_agama/'.base64_encode($this->encrypt->encode($row->perkara_id)); ?>');">PUTUS</a>]
+						[<a href="<?php echo base_url('antrian/selesai_antrian_sidang/'.base64_encode($this->encrypt->encode($row->id))).'/'.$this->uri->segment(3).'/t';?>" onclick="window.open('<?php echo 'http://192.168.2.3/SIPP311/perkara_detil_agama/'.base64_encode($this->encrypt->encode($row->perkara_id)); ?>');">TUNDA</a>]
+						[<a href="<?php echo base_url('antrian/selesai_antrian_sidang/'.base64_encode($this->encrypt->encode($row->id))).'/'.$this->uri->segment(3).'/p';?>" onclick="window.open('<?php echo 'http://192.168.2.3/SIPP311/perkara_detil_agama/'.base64_encode($this->encrypt->encode($row->perkara_id)); ?>');">PUTUS</a>]
 						<?php
 						echo '	[<a href="'.base_url('antrian/selesai_antrian_sidang/'.base64_encode($this->encrypt->encode($row->id))).'/'.$this->uri->segment(3).'/i" id="ikrar">IKRAR</a>] ';
 						$i++;
@@ -73,7 +74,7 @@
 					$no++;
 				}
 			}
-			?>
+			?> 
 		</tbody>
 	</table>
 
