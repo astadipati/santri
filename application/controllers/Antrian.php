@@ -934,7 +934,7 @@ $isifoot22 = printer_create_font("Agency FB", 18, 17, PRINTER_FW_ULTRABOLD, fals
 
 	// FUNGSI SIDANG :: -------------------------------------------
 	// TAMPILAN BARU ANTRIAN SIDANG HAKIM PP
-	function antrian_ruang_sidang(){
+	function pos_sidang(){
 		//$this->minta_akses();
 		$segment=$this->uri->segment_array();
 		$this->load->model('antrian_m','antrian');
@@ -958,10 +958,11 @@ $isifoot22 = printer_create_font("Agency FB", 18, 17, PRINTER_FW_ULTRABOLD, fals
 				$data['main_body'] = 'antrian/antrian_ruang_sidang';
 			}
 
-		    $this->dblokal->tutupkoneksiantrian();
-
-		$this->load->vars($data);
-		$this->load->view('template_antrian');
+			$this->dblokal->tutupkoneksiantrian();
+			
+		$this->load->view('template/header');
+		$this->load->view('content/pos_sidang_1', $data);
+		$this->load->view('template/footer');
 		
 	}
 
@@ -1053,7 +1054,7 @@ $isifoot22 = printer_create_font("Agency FB", 18, 17, PRINTER_FW_ULTRABOLD, fals
 		$this->antrian->edit_status($datastatus,$antrian_id);
 
 		// echo "<script>window.close()</script>";
-		redirect('antrian/antrian_ruang_sidang/'.$segment[4]);
+		redirect('antrian/pos_sidang/'.$segment[4]);
 	}
 
 	function panggil_antrian(){

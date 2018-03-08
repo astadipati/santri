@@ -1,110 +1,51 @@
-<html>
-<head>
-	<link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico" type="image/png">
-	<title>ANTRIAN PA TUBAN</title>
-	<link href="<?php echo base_url();?>assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<table class="table table-bordered">
+		<col  width="5%" />
+        <col  width="15%" />
+        <col  width="10%" />
+        <tbody>
+			<tr>
+				<th>Nomor Antrian</th>
+				<th>Status</th>
+				<th>Action</th>
+			</tr>
+			<?php
+			if (!empty($arr_nomorantrian)){
+				$i=1;
+				while($row = mysql_fetch_assoc($arr_nomorantrian)) {
+	  		    	echo "<tr>";
+					echo "	<td><center>".$row['nomor_antrian']."</center></td>";
+					echo "	<td><center>".($row['status']==0?"Mengantri":($row['status']==1?"Tertunda":"Selesai"))."</center></td>";
+					$onclick = "window.open('".base_url('antrian/panggil_antrian_pendaftaran/'.base64_encode($this->encrypt->encode($row['id'])).'/'.$panggil_no_perk)."')";
+					$onclick2 = "window.open('".base_url('antrian/panggil_antrian_pendaftaran_selesai/'.base64_encode($this->encrypt->encode($row['id'])).'/'.$panggil_no_perk)."')";
+					echo '<td align="center">';
+					if (($row['status']==0 OR $row['status']==1) AND $i<3){
+						if($i == 1){
+							echo '	[<a href="#" class="selesai" onclick="'.$onclick.'">PANGGIL</a>]';
+							echo '	[<a href="#" class="selesai" onclick="'.$onclick2.'">SELESAI</a>]';
+						}elseif ($status == 1 AND $i == 2) {
+							echo '	[<a href="#" class="selesai" onclick="'.$onclick.'">PANGGIL</a>]';
+							echo '	[<a href="#" class="selesai" onclick="'.$onclick2.'">SELESAI</a>]';
+						}else{
+							echo '---';
+						}
+					$status = $row['status'];	
+					$i++;
+					}else{
+						echo '---';
+					}
+					echo '</td>';
+					echo "</tr>";
+				}
+			}
+			?>
+		</tbody>
+	</table>
 
-        <!-- Font Awesome CSS -->
-        <link href="<?php echo base_url();?>assets/css/font-awesome.min.css" rel="stylesheet">
-		
-		<!-- Custom CSS -->
-        <link href="<?php echo base_url();?>assets/css/animate.css" rel="stylesheet">
-
-        <!-- Custom CSS -->
-        <link href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet">
-
-        <!-- Custom Fonts -->
-        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<br/><br/><br/><br/>
 
 
-        <!-- Template js -->
-        <script src="<?php echo base_url();?>assets/antrian/js/jquery.min.js"></script>
-        <!-- <script src="<?php //echo base_url();?>assets/antrian/js/jquery-2.1.1.min.js"></script> -->
-        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-        <script src="<?php echo base_url();?>assets/antrian/bootstrap/js/bootstrap.min.js"></script>
-        <script src="<?php echo base_url();?>assets/antrian/js/jquery.appear.js"></script>
-    
-        <script src="<?php echo base_url();?>assets/antrian/js/jqBootstrapValidation.js"></script>
-        <script src="<?php echo base_url();?>assets/antrian/js/modernizr.custom.js"></script>
-        <script src="<?php echo base_url();?>assets/antrian/js/script.js"></script> 
-        
-      
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-        <script type='text/javascript'>
-        <!--
-        var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
-        var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
-        var date = new Date();
-        var day = date.getDate();
-        var month = date.getMonth();
-        var thisDay = date.getDay(),
-            thisDay = myDays[thisDay];
-        var yy = date.getYear();
-        var year = (yy < 1000) ? yy + 1900 : yy;
-        var tgl = thisDay + ', ' + day + ' ' + months[month] + ' ' + year;
-
-        // document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
-        //-->
-
-    
-        </script>
-
-        <script type="text/javascript">
-        <!--
-        function showTime() {
-            var a_p = "";
-            var today = new Date();
-            var curr_hour = today.getHours();
-            var curr_minute = today.getMinutes();
-            var curr_second = today.getSeconds();
-            if (curr_hour < 12) {
-                a_p = "AM";
-            } else {
-                a_p = "PM";
-            }
-            if (curr_hour == 0) {
-                curr_hour = 12;
-            }
-            if (curr_hour > 12) {
-                curr_hour = curr_hour - 12;
-            }
-            curr_hour = checkTime(curr_hour);
-            curr_minute = checkTime(curr_minute);
-            curr_second = checkTime(curr_second);
-         document.getElementById('jam').innerHTML=curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
-            }
-
-        function checkTime(i) {
-            if (i < 10) {
-                i = "0" + i;
-            }
-            return i;
-        }
-        setInterval(showTime, 500);
-        //-->
-        </script> 
-</head>
-<body>
-<?php 
-date_default_timezone_set("Asia/Jakarta");
-$this->load->view($main_body); 
-?>
-
-    
-        <!-- Start Copyright Section -->
-        <div class="copyright text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <marquee behavior="scrool"direction="left"scrollamount="5"scrolldelay="50">Visi : " Terwujudnya Kesatuan Hukum dan Aparatur Pengadilan Agama yang Profesional efektif, efesien dan akuntabel menuju Badan Peradilan Indonesia yang Agung"</marquee>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Copyright Section -->
-
-</body>
-</html>
+<script type="text/javascript">
+	$('.selesai').click(function() {
+    location.reload();
+	});
+</script>

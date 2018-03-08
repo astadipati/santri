@@ -126,17 +126,17 @@
                             <a href="#"><i class="fa fa-institution  fa-fw"></i> Ruang Sidang<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="blank.html">Ruang Sidang 1</a>
+                                    <a href="<?php echo base_url()?>antrian/pos_sidang/1">Ruang Sidang 1</a>
                                 </li>
                                 <li>
-                                    <a href="blank.html">Ruang Sidang 2</a>
+                                <a href="<?php echo base_url()?>antrian/pos_sidang/2">Ruang Sidang 2</a>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="blank.html">Ruang Sidang 3</a>
                                 </li>
                                 <li>
                                     <a href="blank.html">Ruang Sidang 4</a>
-                                </li>
+                                </li> -->
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -144,7 +144,7 @@
                             <a href="#"><i class="fa fa-bullhorn -o fa-fw"></i> POS Panggilan<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="blank.html">Posyankum</a>
+                                <a href="<?php echo base_url()?>antrian/pos_posyankum">Posyankum</a>
                                 </li>
                                 <li>
                                     <a href="blank.html">Kasir</a>

@@ -247,7 +247,7 @@ class Antrian_m extends CI_Model {
 	function get_antrian_list2($ruangan_id){
 		$ruangan_id = ($ruangan_id == '' ? 0 : $ruangan_id);
 		try {
-			$sql="select * 
+			$sql="select *  
 				from (select * from antrian where tanggal_sidang='".date('Y-m-d')."' AND ruang_id=".$ruangan_id.") as a
 				left join perkara p on a.perkara_id=p.perkara_id order by id ASC;";
 			return $this->db->query($sql);

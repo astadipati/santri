@@ -28,6 +28,8 @@
 				<td>Nomor Antrian</td>
 				<td>Tanggal Sidang</td>
 				<td>Nomor Perkara</td>
+				<td>Pihak 1</td>
+				<td>Pihak 2</td>
 				<td>Status</td>
 				<td>Action</td>
 			</tr>
@@ -40,6 +42,8 @@
 					echo "	<td>".$row->nomor_antrian."</td>";
 					echo "	<td>".$row->tanggal_sidang."</td>";
 					echo "	<td>".$row->nomor_perkara."</td>";
+					echo "	<td>".$row->pihak1_text."</td>";
+					echo "	<td>".$row->pihak2_text."</td>";
 					echo "	<td>".(($row->status==0 || $row->status==4) ?"Mengantri":($row->status==1?"Tertunda":"Selesai"))."</td>";
 					$onclickpihak = "window.open('".base_url('antrian/panggil_antrian/'.base64_encode($this->encrypt->encode($row->id)).'/1/pihak')."')";
 					$onclicksaksi = "window.open('".base_url('antrian/panggil_antrian/'.base64_encode($this->encrypt->encode($row->id)).'/1/saksi')."')";
@@ -55,7 +59,6 @@
 						if($this->session->userdata('jenis_pengadilan')==4) {
 							// echo '	[<a href="#" onclick="'.$onclick2.'">SKORS</a>] <br> ';
 						}else{
-
 							// echo '	[<a href="#" onclick="'.$onclick2.'">TUNDA</a>] <br> ';
 						}
 						// echo '	[<a href="#" onclick="'.$onclick3.'" id="selesai">SELESAI</a>] <br> ';
