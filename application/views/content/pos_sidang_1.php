@@ -2,18 +2,14 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="page-header">ANTRIAN SIDANG - RUANG <?php echo $this->uri->segment(3);?></h3>
+                    <h3 class="page-header">POS RUANG SIDANG <?php echo $this->uri->segment(3);?></h3>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row" >
-				<table  class="table table-bordered">
-					<!-- <col  width="15%" />
-					<col  width="15%" />
-					<col  width="15%" />
-					<col  width="10%" />
-					<col  width="10%" /> -->
+			<div class="table-responsive">
+			<table  class="table table-striped table-bordered table-hover">
 					<tbody>
 						<tr >
 							<td>Nomor Antrian</td>
@@ -69,6 +65,8 @@
 						?> 
 					</tbody>
 				</table>
+			</div>
+				
 
 
 <script type="text/javascript">

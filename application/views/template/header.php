@@ -131,12 +131,6 @@
                                 <li>
                                 <a href="<?php echo base_url()?>antrian/pos_sidang/2">Ruang Sidang 2</a>
                                 </li>
-                                <!-- <li>
-                                    <a href="blank.html">Ruang Sidang 3</a>
-                                </li>
-                                <li>
-                                    <a href="blank.html">Ruang Sidang 4</a>
-                                </li> -->
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>

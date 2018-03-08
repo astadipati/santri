@@ -90,8 +90,7 @@ class Antrian extends CI_Controller {
 
 
 		$data['main_body']='antrian/display_home_lain';
-		$this->load->vars($data);
-		$this->load->view('template_antrian');
+		$this->load->view('template_antrian', $data);
 	}
 
 
