@@ -6,7 +6,7 @@ date_default_timezone_set("Asia/Jakarta");
 <head>
 
 <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.ico" type="image/png">
-    <title>ANTRIAN PA TUBAN</title>
+    <title>ANTRIAN PA TUBAN</title> 
 
         <!-- <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/component.css" /> -->
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
@@ -18,7 +18,7 @@ date_default_timezone_set("Asia/Jakarta");
 
         .bg { 
             /* The image used */
-            background-image: url("http://localhost/santri/assets/images/bg.jpg");
+            background-image: url("../assets/images/bg.jpg");
             /* Full height */
             height: 100%; 
 

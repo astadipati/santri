@@ -98,28 +98,7 @@
                         </li>
 
                         <li>
-                            <a href="#"><i class="fa fa-plus  fa-fw"></i> Input Non Sidang<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="panels-wells.html">Pendaftaran</a>
-                                </li>
-                                <li>
-                                    <a href="buttons.html">Meja 1</a>
-                                </li>
-                                <li>
-                                    <a href="notifications.html">Kasir</a>
-                                </li>
-                                <li>
-                                    <a href="typography.html">Mediasi</a>
-                                </li>
-                                <li>
-                                    <a href="icons.html"> Akte Cerai</a>
-                                </li>
-                                <li>
-                                    <a href="grid.html">Pengaduan</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
+                            <a href="<?php echo base_url()?>antrian/home" target="_blank"><i class="fa  fa-plus fa-fw" ></i> Input Antrian</a>
                         </li>
               
                         <li>

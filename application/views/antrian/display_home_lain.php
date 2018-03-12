@@ -1,5 +1,25 @@
-<div id="ccantrian">
+<style type="text/css">
+ /* background */
+ body, html {
+            height: 100%;
+        }
 
+        .bg { 
+            /* The image used */
+            background-image: url("../assets/images/bg.jpg");
+            /* Full height */
+            height: 100%; 
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* end background */
+
+</style>
+<div id="ccantrian">
+<div class="bg">
 <section id="logo-section" class="text-center">
             <div class="container">
                 <div class="row">
@@ -64,7 +84,7 @@
         <!-- End Main Body Section -->
 
         
-    
+        </div>
 </div>
 
 <script type="text/javascript">

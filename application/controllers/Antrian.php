@@ -111,8 +111,7 @@ class Antrian extends CI_Controller {
 	$data['x1_am']=$x1_am; 
 	$data['nomor_perkara']=$nomor_perkara; 
 	$data['main_body']='antrian/lihat_panjar'; 
-	$this->load->vars($data);
-	$this->load->view('template_antrian');
+	$this->load->view('template_antrian',$data);
 	}
 
 	function data_panjar(){
@@ -1231,10 +1230,9 @@ $isifoot22 = printer_create_font("Agency FB", 18, 17, PRINTER_FW_ULTRABOLD, fals
 		}
 	}
 
-	function input_para_pihak_sidang(){
+	function input_sidang(){
 		$data['main_body']='antrian/input_antrian_pihak_sidang_v_tampilan_baru';
-		$this->load->vars($data);
-		$this->load->view('template_antrian');
+		$this->load->view('template_antrian', $data);
 	}
 
 
@@ -1410,10 +1408,9 @@ $isifoot22 = printer_create_font("Agency FB", 18, 17, PRINTER_FW_ULTRABOLD, fals
 		echo "<script>window.close()</script>";
 	}
 
-	function input_para_pihak_ac(){
+	function input_ac(){
 		$data['main_body']='antrian/input_antrian_pihak_ac_v';
-		$this->load->vars($data);
-		$this->load->view('template_antrian');
+		$this->load->view('template_antrian', $data);
 	}
 
 	function ambil_nomor_ac(){
@@ -1508,11 +1505,6 @@ $isifoot22 = printer_create_font("Agency FB", 18, 17, PRINTER_FW_ULTRABOLD, fals
 			}
 		}
 		
-
-		
-		// redirect('antrian/home');
-		// header('Refresh: 10; URL='.base_url("antrian/home"));
-
 	}
 
 	function ambil_nomor_ac_param($ket,$perkara_id,$nomor_perkara){
@@ -1777,10 +1769,9 @@ $isifoot22 = printer_create_font("Agency FB", 18, 17, PRINTER_FW_ULTRABOLD, fals
 		echo "<script>window.close()</script>";
 	}
 
-	function input_para_pihak_kasir(){
+	function input_kasir(){
 		$data['main_body']='antrian/input_antrian_pihak_kasir_v';
-		$this->load->vars($data);
-		$this->load->view('template_antrian');
+		$this->load->view('template_antrian', $data);
 	}
 
 	function ambil_nomor_kasir(){		
@@ -2349,10 +2340,9 @@ $isifoot22 = printer_create_font("Agency FB", 18, 17, PRINTER_FW_ULTRABOLD, fals
 		echo "<script>window.close()</script>";
 	}
 
-	function input_para_pihak_mediasi(){
+	function input_mediasi(){
 		$data['main_body']='antrian/input_antrian_pihak_mediasi_v';	
-		$this->load->vars($data);
-		$this->load->view('template_antrian');
+		$this->load->view('template_antrian', $data);
 	}
 
 	function ambil_nomor_mediasi(){

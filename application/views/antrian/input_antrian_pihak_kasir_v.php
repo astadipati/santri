@@ -1,4 +1,22 @@
 <style type="text/css">
+ /* background */
+ body, html {
+            height: 100%;
+        }
+
+        .bg { 
+            /* The image used */
+            background-image: url("../assets/images/bg.jpg");
+            /* Full height */
+            height: 100%; 
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* end background */
+
     input[type=text] {
     width: 100%;
     padding: 12px 20px;
@@ -16,7 +34,8 @@
 }
 </style>
 <div id="ccantrian">
-<section id="logo-section" class="text-center">
+<div class="bg">
+    <section id="logo-section" class="text-center">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -76,6 +95,7 @@
         </div>
         <!-- End Copyright Section -->
 
+</div>
 </div>
 
 

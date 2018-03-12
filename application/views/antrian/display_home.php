@@ -1,5 +1,24 @@
-<div id="ccantrian">
+<style>
+        /* background */
+        body, html {
+            height: 100%;
+        }
 
+        .bg { 
+            /* The image used */
+            background-image: url("../assets/images/bg.jpg");
+            /* Full height */
+            height: 100%; 
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        /* end background */
+</style>
+<div id="ccantrian">
+<div class="bg">
 <section id="logo-section" class="text-center">
             <div class="container">
                 <div class="row">
@@ -37,16 +56,15 @@
                             </div>
                             <div class="col-md-6" >
                                 <div class="menu-item light-orange responsive-2">
-                                    <a href='<?php echo site_url(); ?>antrian/input_para_pihak_sidang'>
+                                    <a href='<?php echo site_url(); ?>antrian/input_sidang'>
                                         <p class="nomor_antrian_home">RUANG SIDANG 1 [ <?php echo $jumlah_sidang_1; ?> ] : RUANG SIDANG 2 [ <?php echo $jumlah_sidang_2; ?> ]</p>
                                         <p class="nama_ruang_home">SIDANG</p>
                                     </a>
                                 </div>
                             </div>
-
                              <div class="col-md-6">
                                 <div class="menu-item green responsive-2">
-                                    <a href='<?php echo site_url(); ?>antrian/input_para_pihak_mediasi'>
+                                    <a href='<?php echo site_url(); ?>antrian/input_mediasi'>
                                         <p class="nomor_antrian_home">MEDIASI [ <?php echo $jumlah_mediasi; ?> ]</p>
                                         <p class="nama_ruang_home">MEDIASI</p>
                                     </a>
@@ -55,7 +73,7 @@
 
                             <div class="col-md-6">
                                 <div class="menu-item color responsive-2">
-                                    <a href='<?php echo site_url(); ?>antrian/input_para_pihak_kasir'>
+                                    <a href='<?php echo site_url(); ?>antrian/input_kasir'>
                                         <p class="nomor_antrian_home">KASIR [ <?php echo $jumlah_kasir; ?> ]</p>
                                         <p class="nama_ruang_home_2">KASIR</p>
                                     </a>
@@ -64,7 +82,7 @@
 
                             <div class="col-md-6" id="ac">
                                 <div class="menu-item light-red responsive-2">
-                                    <a href='<?php echo site_url(); ?>antrian/input_para_pihak_ac'>
+                                    <a href='<?php echo site_url(); ?>antrian/input_ac'>
                                         <p class="nomor_antrian_home">LOKET AKTA CERAI [ <?php echo $jumlah_ac; ?> ]</p>
                                         <p class="nama_ruang_home_2">AKTA CERAI / SALINAN PUTUSAN</p>
                                     </a>
@@ -96,9 +114,7 @@
             </div>
         </div>
         <!-- End Main Body Section -->
-
-        
-    
+        </div>
 </div>
 
 <script type="text/javascript">

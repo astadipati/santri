@@ -2,7 +2,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="page-header">Ruang POSYANKUM</h3>
+                    <h3 class="page-header">Ruang Sidang 1</h3>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -16,7 +16,8 @@
                                     <i class="fa fa-legal  fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge"><?php echo $jml_sdg1;?></div>
+                                <!-- <span class="badge badge-pill badge-danger">15</span> -->
+                                    <div class="badge badge-pill badge-danger huge"><?php echo $jml_sdg1;?></div>
                                     <div>Jumlah Sidang</div>
                                 </div>
                             </div>
@@ -38,7 +39,7 @@
                                     <i class="fa fa-users fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge"><?php echo $ambil_sdg1;?></div>
+                                    <div class="badge badge-pill badge-danger huge"><?php echo $ambil_sdg1;?></div>
                                     <div>Hadir</div>
                                 </div>
                             </div>
@@ -60,7 +61,7 @@
                                     <i class="fa fa-retweet fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge"><?php $sisa1=$jml_sdg1-$ambil_sdg1;
+                                    <div class="badge badge-pill badge-danger huge"><?php $sisa1=$jml_sdg1-$ambil_sdg1;
                                         echo $sisa1;
                                     ?></div>
                                     <div>Belum Hadir</div>
@@ -84,7 +85,7 @@
                                     <i class="fa fa-flag-checkered  fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">13</div>
+                                    <div class="badge badge-pill badge-danger huge">13</div>
                                     <div>Selesai</div>
                                 </div>
                             </div>
@@ -118,7 +119,7 @@
                                     <i class="fa fa-legal  fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge"><?php echo $jml_sdg2;?></div>
+                                    <div class="badge badge-pill badge-danger huge"><?php echo $jml_sdg2;?></div>
                                     <div>Jumlah Sidang</div>
                                 </div>
                             </div>
@@ -140,7 +141,7 @@
                                     <i class="fa fa-users  fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge"><?php echo $ambil_sdg2;?></div>
+                                    <div class="badge badge-pill badge-danger huge"><?php echo $ambil_sdg2;?></div>
                                     <div>Hadir</div>
                                 </div>
                             </div>
@@ -162,7 +163,7 @@
                                     <i class="fa fa-retweet fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge"><?php $sisa2=$jml_sdg2-$ambil_sdg2;
+                                    <div class="badge badge-pill badge-danger huge"><?php $sisa2=$jml_sdg2-$ambil_sdg2;
                                         echo $sisa2;
                                     ?></div>
                                     <div>Belum Hadir</div>
@@ -186,7 +187,7 @@
                                     <i class="fa fa-flag-checkered  fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">13</div>
+                                    <div class="badge badge-pill badge-danger huge">13</div>
                                     <div>Selesai</div>
                                 </div>
                             </div>
